@@ -193,7 +193,6 @@ footer {
 
 .card-grid {
   width: 100%;
-  max-width: 1110px;
   grid-template-columns: repeat(auto-fit, 350px);
   place-content: center;
   place-items: center;

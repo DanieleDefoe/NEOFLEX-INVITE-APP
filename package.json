@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "homepage": "https://daineledefoe.github.io/NEOFLEX-INVITE-APP/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
