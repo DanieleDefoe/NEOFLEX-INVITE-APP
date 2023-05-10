@@ -34,7 +34,7 @@ export default function ChosenCard({
   return (
     <article className="w-100% min-h-[218px] relative rounded-[30px] bg-white chosen-card overflow-hidden flex items-center py-5 pl-[18px] pr-[28px] gap-5">
       <div className="flex flex-col items-center gap-4 w-[146px]">
-        <img src={`/src/assets/${image}`} />
+        <img src={image} />
         <div className="flex w-full justify-between items-center">
           <button
             className="decrement-amount w-[35px] h-[30px]"
