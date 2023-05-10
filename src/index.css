@@ -1,0 +1,298 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Monstserrat';
+  src: url(./fonts/static/Montserrat-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monstserrat';
+  src: url(./fonts/static/Montserrat-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monstserrat';
+  src: url(./fonts/static/Montserrat-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monstserrat';
+  src: url(./fonts/static/Montserrat-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent-color: #ffa542;
+  --main-background: #eaeaea;
+  --primary-shadow: rgba(0, 0, 0, 0.1);
+  --rate-color: #838383;
+  --primary-text-color: #1c1c27;
+  --price-color: #aaa;
+  --button-background: #101010;
+  --secondary-shadow: rgba(0, 0, 0, 0.25);
+}
+
+body {
+  font-family: Monstserrat, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  background: var(--main-background);
+}
+
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 15px;
+}
+
+header {
+  height: 60px;
+}
+
+.header__title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.button-heart {
+  background: url(./assets/like.svg) no-repeat center / contain;
+}
+
+.button-cart {
+  background: url(./assets/cart.svg) no-repeat center / contain;
+}
+
+.card {
+  box-shadow: 0 0 20px 0 var(--primary-shadow);
+}
+
+.headphones__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--rate-color);
+}
+
+.card__title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary-text-color);
+}
+
+.chosen-card__title {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary-text-color);
+}
+
+.chosen-card__price {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--price-color);
+}
+
+.chosen-card__amount {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.card__price {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--accent-color);
+}
+
+.card__rate {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--rate-color);
+}
+
+.card__buy-btn {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.footer__vk {
+  background: url(./assets/VK.svg) no-repeat center / contain;
+}
+
+.footer__whatsapp {
+  background: url(./assets/Whatsapp.svg) no-repeat center / contain;
+}
+
+.footer__telegram {
+  background: url(./assets/Telegram.svg) no-repeat center / contain;
+}
+
+footer {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.footer__lang {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.footer__lang.current {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.card-grid {
+  width: 100%;
+  max-width: 1110px;
+  grid-template-columns: repeat(auto-fit, 350px);
+  place-content: center;
+  place-items: center;
+  gap: 28px;
+}
+
+.button-cart__amount {
+  background: var(--accent-color);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.shopping-cart__title {
+  color: var(--primary-text-color);
+}
+
+.trash-btn {
+  background: url(./assets/trash.svg) no-repeat center / contain;
+}
+
+.chosen-card,
+.cart__result {
+  box-shadow: 0 0 20px var(--primary-shadow);
+}
+
+.result__button {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  background: var(--button-background);
+  box-shadow: 0 0 20px var(--secondary-shadow);
+}
+
+.card__result-text {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.shopping-cart__amount {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.chosen-card__total {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: var(--primary-text-color);
+}
+
+.app {
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.increment-amount {
+  background: url(./assets/+.svg) no-repeat center / contain;
+}
+
+.decrement-amount {
+  background: url(./assets/-.svg) no-repeat center / contain;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    justify-content: unset;
+    gap: 20px;
+    padding-bottom: 28px;
+    align-items: center;
+  }
+
+  footer ul {
+    align-items: center;
+  }
+
+  .footer__langs {
+    gap: unset;
+    justify-content: space-between;
+  }
+
+  .footer__links {
+    gap: 30px;
+  }
+
+  .footer__links > a {
+    width: 40px;
+    height: 40px;
+  }
+}
