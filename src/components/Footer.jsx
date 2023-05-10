@@ -1,3 +1,5 @@
+import globe from '../assets/globe.svg'
+
 export default function Footer({ toggleDisplay }) {
   return (
     <footer className="w-full max-w-[1110px] bg-white min-h-[150px] rounded-tl-[30px] self-end rounded-tr-[30px] mx-auto px-[29px] pt-[29px] flex justify-between">
@@ -20,7 +22,7 @@ export default function Footer({ toggleDisplay }) {
           Условия сервиса
         </a>
         <div className="flex gap-4 footer__langs">
-          <img src="/src/assets/globe.svg" className="w-[20px] h-[20px]" />
+          <img src={globe} className="w-[20px] h-[20px]" />
           <button className="hover:opacity-75 footer__lang current">Рус</button>
           <button className="hover:opacity-75 footer__lang">Eng</button>
         </div>
