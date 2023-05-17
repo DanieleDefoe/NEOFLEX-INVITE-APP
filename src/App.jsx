@@ -15,7 +15,9 @@ export default function App() {
     () => JSON.parse(sessionStorage.getItem('chosenCards')) || [],
   )
 
-  const [currentDisplay, setCurrentDisplay] = useState('shop')
+  const [currentDisplay, setCurrentDisplay] = useState(
+    () => sessionStorage.getItem('qpickDisplay') || 'shop',
+  )
 
   useEffect(() => {
     sessionStorage.setItem('chosenCards', JSON.stringify(chosenCards))
@@ -41,15 +43,23 @@ export default function App() {
     )
   }
 
-  function toggleDisplay() {
-    setCurrentDisplay((prevDisplay) =>
-      prevDisplay === 'shop' ? 'chosen cards' : 'shop',
-    )
+  function displayCart() {
+    setCurrentDisplay('cart')
+    sessionStorage.setItem('qpickDisplay', 'cart')
+  }
+
+  function displayShop() {
+    setCurrentDisplay('shop')
+    sessionStorage.setItem('qpickDisplay', 'shop')
   }
 
   return (
     <div className="max-w-[1135px] mx-auto min-h-screen grid app">
-      <Header chosenCards={chosenCards} toggleDisplay={toggleDisplay} />
+      <Header
+        chosenCards={chosenCards}
+        displayCart={displayCart}
+        displayShop={displayShop}
+      />
       <MainSection>
         {currentDisplay === 'shop' ? (
           <>
@@ -64,7 +74,7 @@ export default function App() {
           />
         )}
       </MainSection>
-      <Footer toggleDisplay={toggleDisplay} />
+      <Footer displayCart={displayCart} />
     </div>
   )
 }

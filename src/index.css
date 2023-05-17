@@ -261,11 +261,11 @@ footer {
 }
 
 .increment-amount {
-  background: url(./assets/+.svg) no-repeat center / contain;
+  background: url(./assets/plus.svg) no-repeat center / contain;
 }
 
 .decrement-amount {
-  background: url(./assets/-.svg) no-repeat center / contain;
+  background: url(./assets/minus.svg) no-repeat center / contain;
 }
 
 @media only screen and (max-width: 600px) {

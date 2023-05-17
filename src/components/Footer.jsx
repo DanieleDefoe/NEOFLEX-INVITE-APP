@@ -1,6 +1,6 @@
 import globe from '../assets/globe.svg'
 
-export default function Footer({ toggleDisplay }) {
+export default function Footer({ displayCart }) {
   return (
     <footer className="w-full max-w-[1110px] bg-white min-h-[150px] rounded-tl-[30px] self-end rounded-tr-[30px] mx-auto px-[29px] pt-[29px] flex justify-between">
       <h1 className="uppercase header__title">qpick</h1>
@@ -9,7 +9,7 @@ export default function Footer({ toggleDisplay }) {
           <a href="#" className="hover:opacity-75">
             Избранное
           </a>
-          <a href="#" onClick={toggleDisplay} className="hover:opacity-75">
+          <a href="#" onClick={displayCart} className="hover:opacity-75">
             Корзина
           </a>
           <a href="#" className="hover:opacity-75">
