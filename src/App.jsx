@@ -11,6 +11,7 @@ import Cart from './pages/Cart'
 import Favorites from './pages/Favorites'
 import Contacts from './pages/Contacts'
 import Policy from './pages/Policy'
+import Error from './pages/Error'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="favorites" element={<Favorites />} />
       <Route path="contacts" element={<Contacts />} />
       <Route path="policy" element={<Policy />} />
+      <Route path="*" element={<Error />} />
     </Route>,
   ),
 )
