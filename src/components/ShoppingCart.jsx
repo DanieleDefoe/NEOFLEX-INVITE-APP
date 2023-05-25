@@ -9,8 +9,8 @@ export default function ShoppingCart({
   return (
     <section className="flex flex-col gap-[20px] w-full">
       <h2 className="headphones__title shopping-cart__title">Корзина</h2>
-      <div className="flex justify-between items-start gap-[15px]">
-        <div className="flex flex-col gap-[20px] w-full max-w-[633px] ">
+      <div className="flex cart justify-between items-start gap-[15px]">
+        <div className="flex flex-col gap-[20px] w-full max-w-[633px]">
           {chosenCards.map(({ image, id, title, price, amount }) => (
             <ChosenCard
               key={id}

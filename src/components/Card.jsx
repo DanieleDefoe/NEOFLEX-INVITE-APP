@@ -10,7 +10,7 @@ export default function Card({
   amount,
 }) {
   return (
-    <article className="w-[350px] h-[407px] rounded-[30px] card bg-white pb-[26px] pt-[15px] px-[20px] flex flex-col justify-between">
+    <article className="w-full min-h-[407px] rounded-[30px] card bg-white pb-[26px] pt-[15px] px-[20px] flex flex-col justify-between">
       <div className="h-full flex items-center justify-center">
         <img src={image} className="mx-auto" alt="" />
       </div>
